@@ -172,6 +172,6 @@ app.config.syncMappingPath=classpath:syncMapping.json
     ]
   }]
 ```
-配置JSON的具体含义参考类：com.zhikan.customize.model.SyncMappingConfig
+配置JSON的具体含义参考类：[SyncMappingConfig](https://github.com/zhikanit3rd/openapi-demo/blob/main/DataSync/src/main/java/com/zhikan/customize/model/SyncMappingConfig.java)
 
 主要目的是将项目、项目的工作类型、工作类型下的每个字段进行映射配置。
