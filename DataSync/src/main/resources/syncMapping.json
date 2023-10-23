@@ -1,0 +1,153 @@
+[{
+    "sourceProjectId": 23542065,
+    "targetProjectId": 167019207,
+    "issueTypeMappings":[
+      {
+        "sourceTypeId":"23542262",
+        "targetTypeId": 167019337,
+      "statusMapping":{
+        "sourceField": "status",
+        "targetField": "status",
+        "optionMapping": {
+          "23542141":167019286,
+          "23542142":167019287,
+          "23542143":167019288,
+          "23542144":167019289,
+          "23542145":167019290
+        }
+      },
+        "conditions":[
+          {
+            "fieldCode": "customfield_171056672",
+            "value": 171056676
+          }
+        ]
+      },
+      {
+        "sourceTypeId":"23542262",
+        "targetTypeId": 167061392,
+        "statusMapping":{
+          "sourceField": "status",
+          "targetField": "status",
+          "optionMapping": {
+            "23542141":167019286,
+            "23542142":167019287,
+            "23542143":167019288,
+            "23542144":167019289,
+            "23542145":167019290
+          }
+        },
+        "conditions":[
+          {
+            "fieldCode": "customfield_171056672",
+            "value": 171056677
+          }
+        ]
+      }
+    ],
+    "fieldMappingConfigs": [
+      {
+        "sourceField": "summary",
+        "targetField": "summary"
+      },
+      {
+        "sourceField": "startDate",
+        "targetField": "startDate"
+      },
+      {
+        "sourceField": "dueDate",
+        "targetField": "dueDate"
+      },
+      {
+        "sourceField": "owner",
+        "targetField": "owner"
+      },
+      {
+        "sourceField": "estimatePoint",
+        "targetField": "estimatePoint"
+      },
+      {
+        "sourceField": "priority",
+        "targetField": "priority"
+      },
+      {
+        "sourceField": "follows",
+        "targetField": "follows"
+      },
+      {
+        "sourceField": "assignee",
+        "targetField": "assignee"
+      },
+      {
+        "sourceField": "description",
+        "targetField": "description"
+      },
+      {
+        "sourceField": "customfield_167039258",
+        "targetField": "customfield_167039171"
+      },
+      {
+        "sourceField": "updateBy",
+        "targetField": "customfield_167039164",
+        "single":true
+      },
+      {
+        "sourceField": "customfield_167039248",
+        "targetField": "customfield_167039151"
+      },
+      {
+        "sourceField": "customfield_167029241",
+        "targetField": "customfield_167039135",
+        "optionMapping":{
+          "167029245":167039139,
+          "167029246":167039140
+        }
+      },
+      {
+        "sourceField": "customfield_167029225",
+        "targetField": "customfield_167039120",
+        "optionMapping":{
+          "167029229":167039124,
+          "167029230":167039125
+        },
+        "single":true
+      },
+      {
+        "sourceField": "customfield_167029234",
+        "targetField": "customfield_167039127",
+        "optionMapping":{
+          "167029238":167039131,
+          "167029239":167039132
+        },
+        "single":true
+      },
+      {
+        "sourceField": "customfield_167029219",
+        "targetField": "customfield_167039113"
+      },
+      {
+        "sourceField": "customfield_167029214",
+        "targetField": "customfield_167039108"
+      },
+      {
+        "sourceField": "customfield_167029209",
+        "targetField": "customfield_167039101"
+      },
+      {
+        "sourceField": "customfield_167029197",
+        "targetField": "customfield_167039091"
+      },
+      {
+        "sourceField": "customfield_167029202",
+        "targetField": "customfield_167039096"
+      },
+      {
+        "sourceField": "customfield_167029192",
+        "targetField": "customfield_167039084"
+      },
+      {
+        "sourceField": "customfield_167039241",
+        "targetField": "customfield_167039146"
+      }
+    ]
+  }]

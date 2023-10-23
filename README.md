@@ -1,2 +1,2 @@
-# openapi-demo
-demo to show how to user openapi
+# 示例引用场景
+1. 如跨项目数据同步创建

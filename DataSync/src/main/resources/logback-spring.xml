@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration>
+<configuration debug="false" scan="false">
+    <contextName>SERVER</contextName>
+    <springProperty scope="context" name="logPath" source="log.path"/>
+    <springProperty scope="context" name="logName" source="log.name"/>
+
+    <!-- 控制台日志 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date{yyyy-MM-dd HH:mm:ss} %yellow(%-5level) %X{TRACE_ID} %boldMagenta([%thread]) %cyan(%logger{50}) - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 滚动文件日志 -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${logPath}/${logName}.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>${logPath}/all/${logName}-%d{yyyy-MM-dd}.log.%i.gz</FileNamePattern>
+            <!--单个日志文件大小-->
+            <maxFileSize>100MB</maxFileSize>
+            <!--日志文件保留天数-->
+            <maxHistory>30</maxHistory>
+            <!--最大日志大小-->
+            <totalSizeCap>500MB</totalSizeCap>
+        </rollingPolicy>
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date{yyyy-MM-dd HH:mm:ss} %-5level %X{TRACE_ID} [%thread] %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 滚动文件日志 -->
+    <appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${logPath}/${logName}.error.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>${logPath}/error/${logName}-%d{yyyy-MM-dd}.error.log.%i.gz</FileNamePattern>
+            <!--单个日志文件大小-->
+            <maxFileSize>100MB</maxFileSize>
+            <!--日志文件保留天数-->
+            <maxHistory>30</maxHistory>
+            <!--最大日志大小-->
+            <totalSizeCap>500MB</totalSizeCap>
+        </rollingPolicy>
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date{yyyy-MM-dd HH:mm:ss} %-5level %X{TRACE_ID} [%thread] %logger{50} - %msg%n</pattern>
+        </encoder>
+        <!-- 只打印ERROR日志 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- 滚动文件日志 -->
+    <appender name="WARN" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${logPath}/${logName}.warn.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>${logPath}/warn/${logName}-%d{yyyy-MM-dd}.warn.log.%i.gz</FileNamePattern>
+            <!--单个日志文件大小-->
+            <maxFileSize>100MB</maxFileSize>
+            <!--日志文件保留天数-->
+            <maxHistory>30</maxHistory>
+            <!--最大日志大小-->
+            <totalSizeCap>500MB</totalSizeCap>
+        </rollingPolicy>
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date{yyyy-MM-dd HH:mm:ss} %-5level %X{TRACE_ID} [%thread] %logger{50} - %msg%n</pattern>
+        </encoder>
+        <!-- 只打印ERROR日志 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- 滚动文件日志 -->
+    <appender name="INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${logPath}/${logName}.info.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>${logPath}/info/${logName}-%d{yyyy-MM-dd}.info.log.%i.gz</FileNamePattern>
+            <!--单个日志文件大小-->
+            <maxFileSize>100MB</maxFileSize>
+            <!--日志文件保留天数-->
+            <maxHistory>30</maxHistory>
+            <!--最大日志大小-->
+            <totalSizeCap>500MB</totalSizeCap>
+        </rollingPolicy>
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date{yyyy-MM-dd HH:mm:ss} %-5level %X{TRACE_ID} [%thread] %logger{50} - %msg%n</pattern>
+        </encoder>
+        <!-- 只打印ERROR日志 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- 滚动文件日志 -->
+    <appender name="DEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${logPath}/${logName}.debug.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>${logPath}/debug/${logName}-%d{yyyy-MM-dd}.debug.log.%i.gz</FileNamePattern>
+            <!--单个日志文件大小-->
+            <maxFileSize>100MB</maxFileSize>
+            <!--日志文件保留天数-->
+            <maxHistory>30</maxHistory>
+            <!--最大日志大小-->
+            <totalSizeCap>500MB</totalSizeCap>
+        </rollingPolicy>
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%date{yyyy-MM-dd HH:mm:ss} %-5level %X{TRACE_ID} [%thread] %logger{50} - %msg%n</pattern>
+        </encoder>
+        <!-- 只打印ERROR日志 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>DEBUG</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <logger name="com.alibaba.nacos" level="ERROR"/>
+    <logger name="io.lettuce.core" level="INFO"/>
+    <logger name="com.xxl.job.core.thread.ExecutorRegistryThread" level="INFO"/>
+    <root>
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="ERROR"/>
+        <appender-ref ref="WARN"/>
+        <appender-ref ref="INFO"/>
+        <appender-ref ref="DEBUG"/>
+    </root>
+</configuration>
